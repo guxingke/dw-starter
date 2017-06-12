@@ -9,12 +9,10 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.ws.rs.Path;
+
 import io.dropwizard.setup.Environment;
 
-/**
- * @author gxk
- * @since 2017/6/10 ÏÂÎç5:31
- */
 public abstract class BaseBizModule extends BaseModule {
 
   private Map<String, Class<? extends HealthCheck>> healthChecks = new LinkedHashMap<>(2);
@@ -37,9 +35,7 @@ public abstract class BaseBizModule extends BaseModule {
       return;
     }
 
-    resources.forEach(clazz->{
-      env.jersey().register(injector.getInstance(clazz));
-    });
+    resources.forEach(clazz-> env.jersey().register(injector.getInstance(clazz)));
   }
 
   protected void initHealthChecks(Injector injector) {
@@ -47,9 +43,7 @@ public abstract class BaseBizModule extends BaseModule {
       return;
     }
 
-    healthChecks.forEach((key, value) -> {
-      env.healthChecks().register(key, injector.getInstance(value));
-    });
+    healthChecks.forEach((key, value) -> env.healthChecks().register(key, injector.getInstance(value)));
   }
 
   protected void addHealthCheck(String name, Class<? extends HealthCheck> clazz) {
@@ -57,7 +51,7 @@ public abstract class BaseBizModule extends BaseModule {
   }
 
   protected void addResource(Class resource) throws IllegalArgumentException {
-    if (!resource.isAnnotationPresent(Resource.class)) {
+    if (!resource.isAnnotationPresent(Path.class)) {
       throw new IllegalArgumentException("resources should be has @Resource");
     }
 

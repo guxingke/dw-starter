@@ -6,8 +6,6 @@ import com.gxk.starter.context.BaseBizModule;
 import com.gxk.starter.context.BaseModule;
 import com.gxk.starter.context.RootModule;
 import com.gxk.starter.hello.HelloModule;
-import com.gxk.starter.hello.HelloWorldResource;
-import com.gxk.starter.hello.TemplateHealthCheck;
 import com.gxk.starter.test.TestModule;
 
 import java.util.Arrays;
@@ -16,10 +14,6 @@ import java.util.List;
 import io.dropwizard.Application;
 import io.dropwizard.setup.Environment;
 
-/**
- * @author gxk
- * @since 2017/6/9 ÏÂÎç4:14
- */
 public class App extends Application<AppCfg> {
 
   public static void main(String[] args) throws Exception {
@@ -34,6 +28,7 @@ public class App extends Application<AppCfg> {
   public void run(AppCfg cfg, Environment env) throws Exception {
     List<BaseModule> modules = Arrays.asList(
         new RootModule(cfg, env),
+        
         new HelloModule(cfg, env),
         new TestModule(cfg, env)
     );

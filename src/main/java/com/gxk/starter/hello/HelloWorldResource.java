@@ -1,7 +1,6 @@
 package com.gxk.starter.hello;
 
 import com.codahale.metrics.annotation.Timed;
-import com.gxk.starter.context.Resource;
 
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
@@ -15,7 +14,6 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/hello-world")
 @Produces(MediaType.APPLICATION_JSON)
-@Resource
 public class HelloWorldResource {
     private final String template;
     private final String defaultName;

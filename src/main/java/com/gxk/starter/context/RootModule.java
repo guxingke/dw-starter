@@ -4,10 +4,6 @@ import com.gxk.starter.AppCfg;
 
 import io.dropwizard.setup.Environment;
 
-/**
- * @author gxk
- * @since 2017/6/10 ионГ11:37
- */
 public class RootModule extends BaseModule {
 
   public RootModule(AppCfg cfg, Environment env) {

@@ -4,10 +4,6 @@ import com.codahale.metrics.health.HealthCheck;
 
 import java.util.Random;
 
-/**
- * @author gxk
- * @since 2017/6/10 обнГ6:16
- */
 public class TestHealthCheck extends HealthCheck {
 
   @Override

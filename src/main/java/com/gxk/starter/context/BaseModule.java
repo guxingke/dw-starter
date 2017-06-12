@@ -5,10 +5,6 @@ import com.gxk.starter.AppCfg;
 
  import io.dropwizard.setup.Environment;
 
-/**
- * @author gxk
- * @since 2017/6/9 обнГ11:09
- */
 public abstract class BaseModule extends AbstractModule {
   protected final AppCfg cfg;
   protected final Environment env;

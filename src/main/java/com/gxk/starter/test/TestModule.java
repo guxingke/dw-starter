@@ -5,10 +5,6 @@ import com.gxk.starter.context.BaseBizModule;
 
 import io.dropwizard.setup.Environment;
 
-/**
- * @author gxk
- * @since 2017/6/10 обнГ6:15
- */
 public class TestModule extends BaseBizModule {
 
   public TestModule(AppCfg cfg, Environment env) {
