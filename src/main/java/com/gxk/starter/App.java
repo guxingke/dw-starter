@@ -28,7 +28,8 @@ public class App extends Application<AppCfg> {
   public void run(AppCfg cfg, Environment env) throws Exception {
     List<BaseModule> modules = Arrays.asList(
         new RootModule(cfg, env),
-        
+
+        // biz module
         new HelloModule(cfg, env),
         new TestModule(cfg, env)
     );

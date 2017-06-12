@@ -1,11 +1,11 @@
 DW-Starter 
 ========
 
-dropwizard 起步基础项目. 
+dropwizard starter prj. 
 
 Feature
 ---
-快速开发, 模块化开发.
+DB
 Dropwizard 1.1.0 
 Guice 4.0
 
@@ -26,7 +26,7 @@ mvn clean pacakge
 
 Quick Start
 ---
-参阅 [DropWizard Quick Start](http://www.dropwizard.io/1.0.5/docs/getting-started.html)
+Refer to [DropWizard Quick Start](http://www.dropwizard.io/1.0.5/docs/getting-started.html)
 
 To Do List
 ---
